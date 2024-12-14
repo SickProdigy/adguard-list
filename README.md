@@ -1,4 +1,4 @@
-# SickProdigy Adguard Home List
+# SickProdigy Adguard Home Filter List
 
 My personal adguard home blocker/unblocker list
 
