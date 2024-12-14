@@ -6,7 +6,7 @@
 ! Last modified: 12/13/2024
 ! Version: 1.0.0.1
 
-! General
+! General Safe Sites
 
 @@||bankofamerica.com^
 @@||sickgaming.net^
@@ -18,8 +18,11 @@
 @@||rcs1.xyz
 @@||lscr.io
 
-! Minecraft plugin site
+! Minecraft plugin site (Safe)
 @@||spaceio.xyz
+
+! DanPollucks List disables t.co so you can't follow links essentially.. (Safe twitter tracker)
+@@||t.co
 
 ! websites that have spam and spin articles for views | AI generated also
 
