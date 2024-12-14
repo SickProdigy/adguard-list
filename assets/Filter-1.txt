@@ -1,3 +1,13 @@
+! Title: Sick Prodigy's Personal Adguard List
+! Expires: 1 day (update frequency)
+! Description: Filters for general safe sites, bad actors, fake news, and other annoying sites not to waste time on.
+! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list
+! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE
+! Last modified: 12/13/2024
+! Version: 1.0.0.1
+
+! General
+
 @@||bankofamerica.com^
 @@||sickgaming.net^
 @@||raleighcomfortservices.com^
@@ -7,17 +17,24 @@
 @@||secureservers.top
 @@||rcs1.xyz
 @@||lscr.io
-# Minecraft plugin site
+
+! Minecraft plugin site
 @@||spaceio.xyz
-!websites that have spam and spin articles for views | AI generated also
+
+! websites that have spam and spin articles for views | AI generated also
+
 ||monovm.com^
 ||skynats.com^
 ||marklogic.com^
 ||kinsta.com^
 ||evvr.io^
 ||assetwolf.com^
+
 !Fake news sites
+
 ||twinenviro.com^
-!Newer Adverts
+
+! Newer Adverts
+
 ||defiancebelow.com^$important
 ||api.adroll.app^$important
