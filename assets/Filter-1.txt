@@ -1,0 +1,23 @@
+@@||bankofamerica.com^
+@@||sickgaming.net^
+@@||raleighcomfortservices.com^
+@@||plutonium.pw^
+@@||analytics.google.com^$important
+@@||marketingplatform.google.com^$important
+@@||secureservers.top
+@@||rcs1.xyz
+@@||lscr.io
+# Minecraft plugin site
+@@||spaceio.xyz
+!websites that have spam and spin articles for views | AI generated also
+||monovm.com^
+||skynats.com^
+||marklogic.com^
+||kinsta.com^
+||evvr.io^
+||assetwolf.com^
+!Fake news sites
+||twinenviro.com^
+!Newer Adverts
+||defiancebelow.com^$important
+||api.adroll.app^$important
