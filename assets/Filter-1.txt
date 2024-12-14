@@ -8,30 +8,30 @@
 
 ! General Safe Sites
 
-@@||bankofamerica.com^
-@@||sickgaming.net^
-@@||raleighcomfortservices.com^
-@@||plutonium.pw^
 @@||analytics.google.com^$important
+@@||bankofamerica.com^
+@@||lscr.io^
 @@||marketingplatform.google.com^$important
-@@||secureservers.top
-@@||rcs1.xyz
-@@||lscr.io
+@@||plutonium.pw^
+@@||raleighcomfortservices.com^
+@@||rcs1.xyz^
+@@||secureservers.top^
+@@||sickgaming.net^
 
 ! Minecraft plugin site (Safe)
-@@||spaceio.xyz
+@@||spaceio.xyz^
 
 ! DanPollucks List disables t.co so you can't follow links essentially.. (Safe twitter tracker)
-@@||t.co
+@@||t.co^
 
 ! websites that have spam and spin articles for views | AI generated also
 
+||assetwolf.com^
+||evvr.io^
+||kinsta.com^
+||marklogic.com^
 ||monovm.com^
 ||skynats.com^
-||marklogic.com^
-||kinsta.com^
-||evvr.io^
-||assetwolf.com^
 
 !Fake news sites
 
@@ -39,5 +39,5 @@
 
 ! Newer Adverts
 
-||defiancebelow.com^$important
 ||api.adroll.app^$important
+||defiancebelow.com^$important
