@@ -3,8 +3,8 @@
 ! Description: Filters for general safe sites, bad actors, fake news, and other annoying sites not to waste time on.
 ! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list
 ! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE
-! Last modified: 12/13/2024
-! Version: 1.0.0.1
+! Last modified: 12/20/2024
+! Version: 1.0.0.2
 
 ! General Safe Sites
 
@@ -41,3 +41,207 @@
 
 ||api.adroll.app^$important
 ||defiancebelow.com^$important
+
+
+! Regex Expressions for blocking ads
+$removeparam=aclk
+$removeparam=adcid
+$removeparam=adj_adgroup
+$removeparam=adj_campaign
+$removeparam=adj_deep_link
+$removeparam=adj_t
+$removeparam=af_adset
+$removeparam=aff_sub2
+$removeparam=afftrack
+$removeparam=amc
+$removeparam=analytics-id
+$removeparam=at_campaign
+$removeparam=at_medium
+$removeparam=avast
+$removeparam=awinaffid
+$removeparam=awinmid
+$removeparam=bl3nlclid
+$removeparam=campaign
+$removeparam=channable
+$removeparam=clickId
+$removeparam=clickref
+$removeparam=cmp
+$removeparam=cvid
+$removeparam=dclid
+$removeparam=engagement_type
+$removeparam=fbclid
+$removeparam=fp_ref
+$removeparam=gclid
+$removeparam=gclsrc
+$removeparam=group_name
+$removeparam=gspk
+$removeparam=gsxid
+$removeparam=hsa_acc
+$removeparam=hsa_ad
+$removeparam=hsa_cam
+$removeparam=hsa_grp
+$removeparam=hsa_kw
+$removeparam=hsa_la
+$removeparam=hsa_mt
+$removeparam=hsa_net
+$removeparam=hsa_ol
+$removeparam=hsa_src
+$removeparam=hsa_tgt
+$removeparam=hsa_ver
+$removeparam=icid
+$removeparam=iclid
+$removeparam=kayakclickid
+$removeparam=media_source
+$removeparam=msclkid
+$removeparam=mt_adset
+$removeparam=mt_campaign
+$removeparam=mt_creative
+$removeparam=mt_gaid
+$removeparam=mt_network
+$removeparam=mt_sub1
+$removeparam=mt_sub2
+$removeparam=mt_sub3
+$removeparam=mt_sub4
+$removeparam=mt_sub5
+$removeparam=nlclid
+$removeparam=partner_key
+$removeparam=pid
+$removeparam=refid
+$removeparam=sc_cmp
+$removeparam=subId1
+$removeparam=subid1
+$removeparam=tracking_id
+$removeparam=uclick_id
+$removeparam=utm-source
+$removeparam=utm_campaign
+$removeparam=utm_channel
+$removeparam=utm_cid
+$removeparam=utm_content
+$removeparam=utm_id
+$removeparam=utm_medium
+$removeparam=utm_name
+$removeparam=utm_network
+$removeparam=utm_place
+$removeparam=utm_pubreferrer
+$removeparam=utm_reader
+$removeparam=utm_referrer
+$removeparam=utm_serial
+$removeparam=utm_social
+$removeparam=utm_social-type
+$removeparam=utm_source
+$removeparam=utm_term
+$removeparam=utm_v
+$removeparam=wtrint
+*.ffm.to##.bg-overlay
+*.ffm.to##.privacy-notice-gdpr
+! Regex?
+^*/akam/*^
+^*/coveo/*^
+^*/duracelltomi-google-tag-manager/*^
+^*/fingerprint*.js^
+^*/js/tracking/*^
+^*/mnd-track-client-*.js^
+^*/popupclick/*^
+^*/usercentrics/*.js^
+^*webtrekk_v*.js^
+^AppMeasurement.min.js^
+^Master_AOL.js^
+^Master_AOL.js^
+^activitymonitor.js^
+^adHoc.min.js^
+^adobe-analytics-loader.js^
+^adrum-config.js^
+^adrum.js^
+^advert-xandr.js^
+^affiliateBanner.AOL.js^
+^affiliateBanner.AOL.js^
+^banner-tagging.min.js^
+^bazaarVoice.js^
+^beacon.js^
+^cookie-message-AllBrands.min.js^
+^cookieBanner.AOL.js^
+^coveo*.js^
+^criteo.min.js^
+^delete_pixel.gif^
+^dl.clickmap.min.js^
+^dl.cmp.min.js^
+^dwanalytics-*.js^
+^emailCapture.min.js^
+^event.gif^
+^fastclick.js^
+^fathom.min.js^
+^fingerprint.min.js^
+^fingerprint2.min.js^
+^fpdata.js^
+^gh_show_ads.js^
+^goals.*.min.js^
+^google-analytics-universal-cart.min.js^
+^google-analytics-universal.min.js^
+^google-tag-manager-cart.min.js^
+^kakao.min.js^
+^loadbee_integration.js^
+^log4javascript.js^
+^log_activity^
+^logger.min.js^
+^lsget.html^
+^matomo.js^
+^megaMenuWidget.js^
+^metaTag.min.js^
+^mgnl.js^
+^mixpanel.js^
+^officebrowserfeedbackstrings.js^
+^optgroup.min.js^
+^piano-*.js^
+^piwik-*.js^
+^piwik.js^
+^pixel.gif^
+^popup-cookie.js^
+^prebid.js^
+^presetziezo.js^
+^quantcast-pixel.js^
+^ref.html^
+^ref.php^
+^report.min.js^
+^require-cookie.js^
+^rexdot.js^
+^ruxitagentjs_*.js^
+^sentry-file-uploader^
+^sentry.*.chunk.js^
+^sentry.js^
+^signifyd-fingerprint.min.js^
+^smarttag.js^
+^sst-tracking.min.js^
+^tag.js^
+^temptation.js^
+^tools/multipixel/sys.js^
+^track.js^
+^tracker.js^
+^tracking_event.js^
+^tracking_pixel^
+^trekkie.storefront.*.min.js^
+^umami.js^
+^utag.js^
+^utag.js^
+^utag.sync.js^
+^utag.sync.js^
+^utm.*.min.js^
+^webBehaviorTracking.min.js^
+^webtrekk.js^
+
+! Unblock Access
+@@fingerprinted*.js$domain=stripe.com ## Required for stripe to load
+@@||*.1e100.net^ # Google Server Discovery
+@@||*.awsstatic.com^ # AWS
+@@||accounts.eu1.gigya.com/accounts.getAccountInfo$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
+@@||accounts.eu1.gigya.com/accounts.login$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
+@@||accounts.eu1.gigya.com/accounts.logout$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
+@@||accounts.eu1.gigya.com/accounts.webSdkBootstrap$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
+@@||cdn.cookielaw.org^$domain=id.trimble.com  # unbreak trimble
+@@||cdn.cookielaw.org^$domain=videoland.com # unbreak videoland
+@@||cdns.eu1.gigya.com/gs/sso.htm$subdocument,domain=www.videoland.com # unbreak videoland
+@@||cdns.eu1.gigya.com/gs/webSdk/*$subdocument,domain=videoland.com # unbreak videoland
+@@||cdns.eu1.gigya.com/sdk.config.get$xhr,1p # unbreak videoland
+@@||cdns.eu1.gigya.com^$xhr,domain=www.videoland.com # unbreak videoland
+@@||cdns.gigya.com^$domain=videoland.com # unbreak videoland
+@@||socialize.eu1.gigya.com/socialize.getIDs$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
+@@||socialize.eu1.gigya.com^$xhr,domain=www.videoland.com # unbreak videoland
