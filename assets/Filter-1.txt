@@ -24,8 +24,25 @@
 ! DanPollucks List disables t.co so you can't follow links essentially.. (Safe twitter tracker)
 @@||t.co^
 
-! websites that have spam and spin articles for views | AI generated also
+! Unblock Access Random Video Sites
+@@fingerprinted*.js$domain=stripe.com ## Required for stripe to load
+@@||*.1e100.net^ # Google Server Discovery
+@@||*.awsstatic.com^ # AWS
+@@||accounts.eu1.gigya.com/accounts.getAccountInfo$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
+@@||accounts.eu1.gigya.com/accounts.login$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
+@@||accounts.eu1.gigya.com/accounts.logout$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
+@@||accounts.eu1.gigya.com/accounts.webSdkBootstrap$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
+@@||cdn.cookielaw.org^$domain=id.trimble.com  # unbreak trimble
+@@||cdn.cookielaw.org^$domain=videoland.com # unbreak videoland
+@@||cdns.eu1.gigya.com/gs/sso.htm$subdocument,domain=www.videoland.com # unbreak videoland
+@@||cdns.eu1.gigya.com/gs/webSdk/*$subdocument,domain=videoland.com # unbreak videoland
+@@||cdns.eu1.gigya.com/sdk.config.get$xhr,1p # unbreak videoland
+@@||cdns.eu1.gigya.com^$xhr,domain=www.videoland.com # unbreak videoland
+@@||cdns.gigya.com^$domain=videoland.com # unbreak videoland
+@@||socialize.eu1.gigya.com/socialize.getIDs$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
+@@||socialize.eu1.gigya.com^$xhr,domain=www.videoland.com # unbreak videoland
 
+! Block websites that have spam and spin articles for views | AI generated also
 ||assetwolf.com^
 ||evvr.io^
 ||kinsta.com^
@@ -33,17 +50,19 @@
 ||monovm.com^
 ||skynats.com^
 
-!Fake news sites
-
+! Block Fake news sites
 ||twinenviro.com^
 
-! Newer Adverts
-
+! Block Newer Adverts
 ||api.adroll.app^$important
 ||defiancebelow.com^$important
+! Block Additional Sites / Annoying Adverts
+||d.la3-c1-ia4.salesforceliveagent.com^
+||^ia4.salesforceliveagent.com^
+||la3-c1-ia4.ia4.r.salesforceliveagent.com^
+||^ia4.r.salesforceliveagent.com^
 
-
-! Regex Expressions for blocking ads
+! Regex Expressions for blocking ads (Testing Mostly)
 $removeparam=aclk
 $removeparam=adcid
 $removeparam=adj_adgroup
@@ -227,21 +246,3 @@ $removeparam=wtrint
 ^utm.*.min.js^
 ^webBehaviorTracking.min.js^
 ^webtrekk.js^
-
-! Unblock Access
-@@fingerprinted*.js$domain=stripe.com ## Required for stripe to load
-@@||*.1e100.net^ # Google Server Discovery
-@@||*.awsstatic.com^ # AWS
-@@||accounts.eu1.gigya.com/accounts.getAccountInfo$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
-@@||accounts.eu1.gigya.com/accounts.login$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
-@@||accounts.eu1.gigya.com/accounts.logout$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
-@@||accounts.eu1.gigya.com/accounts.webSdkBootstrap$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
-@@||cdn.cookielaw.org^$domain=id.trimble.com  # unbreak trimble
-@@||cdn.cookielaw.org^$domain=videoland.com # unbreak videoland
-@@||cdns.eu1.gigya.com/gs/sso.htm$subdocument,domain=www.videoland.com # unbreak videoland
-@@||cdns.eu1.gigya.com/gs/webSdk/*$subdocument,domain=videoland.com # unbreak videoland
-@@||cdns.eu1.gigya.com/sdk.config.get$xhr,1p # unbreak videoland
-@@||cdns.eu1.gigya.com^$xhr,domain=www.videoland.com # unbreak videoland
-@@||cdns.gigya.com^$domain=videoland.com # unbreak videoland
-@@||socialize.eu1.gigya.com/socialize.getIDs$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
-@@||socialize.eu1.gigya.com^$xhr,domain=www.videoland.com # unbreak videoland
