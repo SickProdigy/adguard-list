@@ -56,6 +56,8 @@
 ! Block Newer Adverts
 ||api.adroll.app^$important
 ||defiancebelow.com^$important
+! Not really sure why this keeps popping up
+||www.ghacks.net^$important
 ! Block Additional Sites / Annoying Adverts
 ||d.la3-c1-ia4.salesforceliveagent.com^
 ||^ia4.salesforceliveagent.com^
