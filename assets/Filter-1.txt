@@ -14,10 +14,12 @@
 @@||marketingplatform.google.com^$important
 @@||plutonium.pw^
 @@||raleighcomfortservices.com^
-@@||rcs1.xyz^
-@@||secureservers.top^
 @@||sickgaming.net^
 
+! Dandelion sprout doesn't like .top or .xyz sites even though they are cheap...
+@@||hostpro.top^
+@@||secureservers.top^
+@@||rcs1.xyz^
 ! Minecraft plugin site (Safe)
 @@||spaceio.xyz^
 
@@ -41,6 +43,13 @@
 @@||cdns.gigya.com^$domain=videoland.com # unbreak videoland
 @@||socialize.eu1.gigya.com/socialize.getIDs$xhr,domain=cdns.eu1.gigya.com # unbreak videoland
 @@||socialize.eu1.gigya.com^$xhr,domain=www.videoland.com # unbreak videoland
+
+! Referral Commission Sites (Publisher Side blocked in CHN, Peter Lowe List, and Mini Lite
+@@||signup.cj.com
+@@||cj.com
+@@||shareasale.com^
+! How else suppose to browse to links without hitting this bs link.. Maybe 127. it?
+@@||^shareasale-analytics.com^
 
 ! Block websites that have spam and spin articles for views | AI generated also
 ||assetwolf.com^
