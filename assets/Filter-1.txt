@@ -26,6 +26,19 @@
 ! DanPollucks List disables t.co so you can't follow links essentially.. (Safe twitter tracker)
 @@||t.co^
 
+! Below being blocked by 1Hosts (Lite), but firefox/safari tends to have a lot of issues with that
+@@||error-report.com^
+
+! sourceforge won't work without below, which is ads. need to act like it's working and not block
+! have done a lot of testing, not sure the way around yet. oh wait need to selfhost
+! their min.json file to fake it but never finished that. Really complicated but
+! there is 1-2 lines I think you can add/remove to bypass or at least force checks true
+! html-load.com
+! 0.0.0.0 html-load.com
+! Steven Black's List blocks this
+@@||html-load.com
+||*.html-load.com
+
 ! Unblock Access Random Video Sites
 @@fingerprinted*.js$domain=stripe.com ## Required for stripe to load
 @@||*.1e100.net^ # Google Server Discovery
