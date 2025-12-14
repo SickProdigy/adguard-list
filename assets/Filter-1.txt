@@ -19,6 +19,7 @@
 ! Dandelion sprout doesn't like .top or .xyz sites even though they are cheap...
 @@||hostpro.top^
 @@||secureservers.top^
+@@||securehosts.top^
 @@||rcs1.top^
 ! Minecraft plugin site (Safe)
 @@||spaceio.xyz^
