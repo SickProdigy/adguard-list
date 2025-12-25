@@ -41,7 +41,7 @@
 ||*.html-load.com
 
 ! OISD Blocklist full, tlauncher web page not loading 
-@@||i.tlauncher.org^
+@@||tlauncher.org^
 
 ! Unblock Access Random Video Sites
 @@fingerprinted*.js$domain=stripe.com ## Required for stripe to load
