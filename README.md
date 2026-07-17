@@ -13,7 +13,7 @@ My personal AdGuard blocker/unblocker lists.
 
 Add this as a custom DNS blocklist:
 
-https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/assets/Filter-1.txt
+https://gitea.sickgaming.net/sickprodigy/adguard-list/raw/branch/main/assets/Filter-1.txt
 
 This list is mainly to block missing trackers and bad actors that are still able to load on my network. Use it alongside other DNS filters. It also unblocks a few domains to keep sites usable, like `t.co`, `error-report.com`, and `html-load.com`.
 
@@ -21,7 +21,7 @@ This list is mainly to block missing trackers and bad actors that are still able
 
 Add this as a custom browser/content filter:
 
-https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/assets/Filter-2.txt
+https://gitea.sickgaming.net/sickprodigy/adguard-list/raw/branch/main/assets/Filter-2.txt
 
 This list contains rules that AdGuard Home cannot apply, including `$removeparam`, cosmetic selectors like `##`, and URL/path/script rules. These need a browser extension or local client that can see full HTTPS URLs and page elements.
 
