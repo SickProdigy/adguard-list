@@ -3,8 +3,8 @@
 ! Description: Filters for general safe sites, bad actors, fake news, and other annoying sites not to waste time on.
 ! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list
 ! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE
-! Last modified: 12/20/2024
-! Version: 1.0.0.2
+! Last modified: 07/17/2026
+! Version: 1.0.0.3
 
 ! General Safe Sites
 
@@ -37,8 +37,17 @@
 ! html-load.com
 ! 0.0.0.0 html-load.com
 ! Steven Black's List blocks this
-@@||html-load.com
-||*.html-load.com
+@@||html-load.com^$domain=sourceforge.net
+||html-load.com^
+
+! Fandom / Palworld wiki ad slots
+palworld.fandom.com##.top-ads-container
+palworld.fandom.com##.bottom-ads-container
+palworld.fandom.com##.ad-slot
+palworld.fandom.com##.ad-slot-placeholder
+palworld.fandom.com##.gpt-ad
+palworld.fandom.com##.incontent-boxad
+palworld.fandom.com##.rail-module__ad
 
 ! OISD Blocklist full, tlauncher web page not loading
 @@||tlauncher.org^
