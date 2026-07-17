@@ -39,15 +39,6 @@
 ! Steven Black's List blocks this
 @@||html-load.com^
 
-! Fandom / Palworld wiki ad slots
-palworld.fandom.com##.top-ads-container
-palworld.fandom.com##.bottom-ads-container
-palworld.fandom.com##.ad-slot
-palworld.fandom.com##.ad-slot-placeholder
-palworld.fandom.com##.gpt-ad
-palworld.fandom.com##.incontent-boxad
-palworld.fandom.com##.rail-module__ad
-
 ! OISD Blocklist full, tlauncher web page not loading
 @@||tlauncher.org^
 
@@ -88,6 +79,7 @@ palworld.fandom.com##.rail-module__ad
 ||twinenviro.com^
 
 ! Block Newer Adverts
+||tags.crwdcntrl.net^$important
 ||api.adroll.app^$important
 ||defiancebelow.com^$important
 ! Not really sure why this keeps popping up
