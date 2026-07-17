@@ -4,7 +4,7 @@
 ! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list
 ! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE
 ! Last modified: 07/17/2026
-! Version: 1.0.0.3
+! Version: 1.0.0.4
 
 ! General Safe Sites
 
@@ -37,8 +37,9 @@
 ! html-load.com
 ! 0.0.0.0 html-load.com
 ! Steven Black's List blocks this
-@@||html-load.com^$domain=sourceforge.net
-||html-load.com^
+@@||html-load.com^
+||stg.html-load.com^$important
+||fb.html-load.com^$important
 
 ! Fandom / Palworld wiki ad slots
 palworld.fandom.com##.top-ads-container
