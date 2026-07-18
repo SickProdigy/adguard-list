@@ -1,211 +1,106 @@
-! Title: Sick Prodigy Browser Adguard/uBlock List
+! Title: Sick Prodigy's Adguard List
 ! Expires: 1 day (update frequency)
-! Description: Browser extension filters for URL parameters, cosmetic hiding, and path/script blocking. Not intended for AdGuard Home DNS filtering.
+! Description: Filters for general safe sites, bad actors, fake news, and other annoying sites not to waste time on.
 ! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list
 ! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE
 ! Last modified: 07/17/2026
 ! Version: 1.0.0.5
 
-! Browser-specific allow rules moved out of AdGuard Home DNS list
-! Required for stripe to load
-@@fingerprinted*.js$domain=stripe.com
-! unbreak videoland
-@@||accounts.eu1.gigya.com/accounts.getAccountInfo$xhr,domain=cdns.eu1.gigya.com
-@@||accounts.eu1.gigya.com/accounts.login$xhr,domain=cdns.eu1.gigya.com
-@@||accounts.eu1.gigya.com/accounts.logout$xhr,domain=cdns.eu1.gigya.com
-@@||accounts.eu1.gigya.com/accounts.webSdkBootstrap$xhr,domain=cdns.eu1.gigya.com
-! unbreak trimble
-@@||cdn.cookielaw.org^$domain=id.trimble.com
-@@||cdn.cookielaw.org^$domain=videoland.com
-@@||cdns.eu1.gigya.com/gs/sso.htm$subdocument,domain=www.videoland.com
-@@||cdns.eu1.gigya.com/gs/webSdk/*$subdocument,domain=videoland.com
-@@||cdns.eu1.gigya.com/sdk.config.get$xhr,1p
-@@||cdns.eu1.gigya.com^$xhr,domain=www.videoland.com
-@@||cdns.gigya.com^$domain=videoland.com
-@@||socialize.eu1.gigya.com/socialize.getIDs$xhr,domain=cdns.eu1.gigya.com
-@@||socialize.eu1.gigya.com^$xhr,domain=www.videoland.com
+! General Safe Sites that are possibly blocked by other lists. 
+@@||ahrefs.com^
+@@||analytics.google.com^$important
+@@||awesomelists.calvinjeng.io^
+@@||bankofamerica.com^
+@@||crackingpatching.com^
+@@||lscr.io^
+@@||marketingplatform.google.com^$important
+@@||plutonium.pw^
+@@||quickboosts.gg^
+@@||raleighcomfortservices.com^
+@@||sentry.io^
+@@||sickgaming.net^
+@@||tempr.email^
 
-! Regex Expressions for blocking ads (Testing Mostly)
-$removeparam=aclk
-$removeparam=adcid
-$removeparam=adj_adgroup
-$removeparam=adj_campaign
-$removeparam=adj_deep_link
-$removeparam=adj_t
-$removeparam=af_adset
-$removeparam=aff_sub2
-$removeparam=afftrack
-$removeparam=amc
-$removeparam=analytics-id
-$removeparam=at_campaign
-$removeparam=at_medium
-$removeparam=avast
-$removeparam=awinaffid
-$removeparam=awinmid
-$removeparam=bl3nlclid
-$removeparam=campaign
-$removeparam=channable
-$removeparam=clickId
-$removeparam=clickref
-$removeparam=cmp
-$removeparam=cvid
-$removeparam=dclid
-$removeparam=engagement_type
-$removeparam=fbclid
-$removeparam=fp_ref
-$removeparam=gclid
-$removeparam=gclsrc
-$removeparam=group_name
-$removeparam=gspk
-$removeparam=gsxid
-$removeparam=hsa_acc
-$removeparam=hsa_ad
-$removeparam=hsa_cam
-$removeparam=hsa_grp
-$removeparam=hsa_kw
-$removeparam=hsa_la
-$removeparam=hsa_mt
-$removeparam=hsa_net
-$removeparam=hsa_ol
-$removeparam=hsa_src
-$removeparam=hsa_tgt
-$removeparam=hsa_ver
-$removeparam=icid
-$removeparam=iclid
-$removeparam=kayakclickid
-$removeparam=media_source
-$removeparam=msclkid
-$removeparam=mt_adset
-$removeparam=mt_campaign
-$removeparam=mt_creative
-$removeparam=mt_gaid
-$removeparam=mt_network
-$removeparam=mt_sub1
-$removeparam=mt_sub2
-$removeparam=mt_sub3
-$removeparam=mt_sub4
-$removeparam=mt_sub5
-$removeparam=nlclid
-$removeparam=partner_key
-$removeparam=pid
-$removeparam=refid
-$removeparam=sc_cmp
-$removeparam=subId1
-$removeparam=subid1
-$removeparam=tracking_id
-$removeparam=uclick_id
-$removeparam=utm-source
-$removeparam=utm_campaign
-$removeparam=utm_channel
-$removeparam=utm_cid
-$removeparam=utm_content
-$removeparam=utm_id
-$removeparam=utm_medium
-$removeparam=utm_name
-$removeparam=utm_network
-$removeparam=utm_place
-$removeparam=utm_pubreferrer
-$removeparam=utm_reader
-$removeparam=utm_referrer
-$removeparam=utm_serial
-$removeparam=utm_social
-$removeparam=utm_social-type
-$removeparam=utm_source
-$removeparam=utm_term
-$removeparam=utm_v
-$removeparam=wtrint
-*.ffm.to##.bg-overlay
-*.ffm.to##.privacy-notice-gdpr
-! Regex?
-^*/akam/*^
-^*/coveo/*^
-^*/duracelltomi-google-tag-manager/*^
-^*/fingerprint*.js^
-^*/js/tracking/*^
-^*/mnd-track-client-*.js^
-^*/popupclick/*^
-^*/usercentrics/*.js^
-^*webtrekk_v*.js^
-^AppMeasurement.min.js^
-^Master_AOL.js^
-^Master_AOL.js^
-^activitymonitor.js^
-^adHoc.min.js^
-^adobe-analytics-loader.js^
-^adrum-config.js^
-^adrum.js^
-^advert-xandr.js^
-^affiliateBanner.AOL.js^
-^affiliateBanner.AOL.js^
-^banner-tagging.min.js^
-^bazaarVoice.js^
-^beacon.js^
-^cookie-message-AllBrands.min.js^
-^cookieBanner.AOL.js^
-^coveo*.js^
-^criteo.min.js^
-^delete_pixel.gif^
-^dl.clickmap.min.js^
-^dl.cmp.min.js^
-^dwanalytics-*.js^
-^emailCapture.min.js^
-^event.gif^
-^fastclick.js^
-^fathom.min.js^
-^fingerprint.min.js^
-^fingerprint2.min.js^
-^fpdata.js^
-^gh_show_ads.js^
-^goals.*.min.js^
-^google-analytics-universal-cart.min.js^
-^google-analytics-universal.min.js^
-^google-tag-manager-cart.min.js^
-^kakao.min.js^
-^loadbee_integration.js^
-^log4javascript.js^
-^log_activity^
-^logger.min.js^
-^lsget.html^
-^matomo.js^
-^megaMenuWidget.js^
-^metaTag.min.js^
-^mgnl.js^
-^mixpanel.js^
-^officebrowserfeedbackstrings.js^
-^optgroup.min.js^
-^piano-*.js^
-^piwik-*.js^
-^piwik.js^
-^pixel.gif^
-^popup-cookie.js^
-^prebid.js^
-^presetziezo.js^
-^quantcast-pixel.js^
-^ref.html^
-^ref.php^
-^report.min.js^
-^require-cookie.js^
-^rexdot.js^
-^ruxitagentjs_*.js^
-^sentry-file-uploader^
-^sentry.*.chunk.js^
-^sentry.js^
-^signifyd-fingerprint.min.js^
-^smarttag.js^
-^sst-tracking.min.js^
-^tag.js^
-^temptation.js^
-^tools/multipixel/sys.js^
-^track.js^
-^tracker.js^
-^tracking_event.js^
-^tracking_pixel^
-^trekkie.storefront.*.min.js^
-^umami.js^
-^utag.js^
-^utag.js^
-^utag.sync.js^
-^utag.sync.js^
-^utm.*.min.js^
-^webBehaviorTracking.min.js^
-^webtrekk.js^
+! Dandelion sprout doesn't like .top or .xyz sites even though they are cheap...
+@@||awesomelists.top^
+@@||hostpro.top^
+@@||secureservers.top^
+@@||securehosts.top^
+@@||rcs1.top^
+! Minecraft plugin site (Safe)
+@@||spaceio.xyz^
+
+! DanPollucks List disables t.co so you can't follow links essentially.. (Safe twitter tracker)
+@@||t.co^
+
+! Below being blocked by 1Hosts (Lite), but firefox/safari tends to have a lot of issues with that
+@@||error-report.com^
+
+! sourceforge won't work without below, which is ads. need to act like it's working and not block
+! have done a lot of testing, not sure the way around yet. oh wait need to selfhost
+! their min.json file to fake it but never finished that. Really complicated but
+! there is 1-2 lines I think you can add/remove to bypass or at least force checks true
+! html-load.com
+! 0.0.0.0 html-load.com
+! Steven Black's List blocks this
+@@||html-load.com^
+
+! OISD Blocklist full, tlauncher web page not loading
+@@||tlauncher.org^
+
+! Unblock Access Random Video Sites
+@@||*.1e100.net^ # Google Server Discovery
+@@||*.awsstatic.com^ # AWS
+
+! Ad Sites that could be generally safe to make money with, so we can login to them
+@@||infolinks.com^
+
+! Referral Commission Sites (Publisher Side blocked in CHN, Peter Lowe List, and Mini Lite
+@@||signup.cj.com
+@@||cj.com
+@@||shareasale.com^
+! How else suppose to browse to links without hitting this bs link.. Maybe 127. it?
+@@||^shareasale-analytics.com^
+
+
+! Crypto sites for miners, kinda need those if you want to check your stuff or mine to them
+@@||2miners.com^
+@@||moneroocean.stream^
+@@||coinminerz.com^
+
+! Block websites that have spam and spin articles for views | AI generated also
+||assetwolf.com^
+||evvr.io^
+||kinsta.com^
+||marklogic.com^
+||monovm.com^
+||skynats.com^
+
+! Block Fake news sites
+||twinenviro.com^
+
+! Block Newer Adverts
+||tags.crwdcntrl.net^$important
+||api.adroll.app^$important
+||defiancebelow.com^$important
+! Not really sure why this keeps popping up
+||www.ghacks.net^$important
+! Block Additional Sites / Annoying Adverts
+||d.la3-c1-ia4.salesforceliveagent.com^
+||^ia4.salesforceliveagent.com^
+||la3-c1-ia4.ia4.r.salesforceliveagent.com^
+||^ia4.r.salesforceliveagent.com^
+
+! Block Dumb sales sites so i don't want to revisit
+||ahrefs.com^
+||attracta.com^
+||kinsta.com^
+||smallseotools.com^
+||traffboost.net^
+
+!  Block URL Takeovers by Spam Sites
+||1max.top^
+||9anime.to^
+||bannercenter.net^
+||trafficswarm.com^
+||tutubox.io^
