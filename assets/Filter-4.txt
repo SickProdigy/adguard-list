@@ -1,8 +1,8 @@
 ! Title: Sick Prodigy Browser Adguard/uBlock List
 ! Expires: 1 day (update frequency)
 ! Description: Browser extension filters for URL parameters, cosmetic hiding, and path/script blocking. Not intended for AdGuard Home DNS filtering.
-! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list
-! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE
+! Homepage: https://gitea.sickgaming.net/sickprodigy/adguard-list
+! License: https://gitea.sickgaming.net/sickprodigy/adguard-list/raw/branch/main/LICENSE
 ! Last modified: 07/17/2026
 ! Version: 1.0.0.5
 
@@ -209,3 +209,4 @@ $removeparam=wtrint
 ^utm.*.min.js^
 ^webBehaviorTracking.min.js^
 ^webtrekk.js^
+

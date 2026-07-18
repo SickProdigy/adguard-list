@@ -27,8 +27,8 @@ def build() -> str:
         "! Title: Sick Prodigy Compiled AdGuard List",
         "! Expires: 1 day (update frequency)",
         "! Description: Compiled from Filter-2.txt, Filter-3.txt, and Filter-4.txt.",
-        "! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list",
-        "! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE",
+        "! Homepage: https://gitea.sickgaming.net/sickprodigy/adguard-list",
+        "! License: https://gitea.sickgaming.net/sickprodigy/adguard-list/raw/branch/main/LICENSE",
         f"! Last modified: {date.today().strftime('%m/%d/%Y')}",
         "! Version: generated",
         "!",
@@ -57,3 +57,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

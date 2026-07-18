@@ -15,8 +15,8 @@ sources=(
   printf '%s\n' '! Title: Sick Prodigy Compiled AdGuard List'
   printf '%s\n' '! Expires: 1 day (update frequency)'
   printf '%s\n' '! Description: Compiled from Filter-2.txt, Filter-3.txt, and Filter-4.txt.'
-  printf '%s\n' '! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list'
-  printf '%s\n' '! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE'
+  printf '%s\n' '! Homepage: https://gitea.sickgaming.net/sickprodigy/adguard-list'
+  printf '%s\n' '! License: https://gitea.sickgaming.net/sickprodigy/adguard-list/raw/branch/main/LICENSE'
   printf '! Last modified: %s\n' "$(date +'%m/%d/%Y')"
   printf '%s\n' '! Version: generated'
   printf '%s\n' '!'
@@ -46,3 +46,4 @@ sources=(
 } > "$output"
 
 printf 'Wrote assets/Filter-1.txt\n'
+

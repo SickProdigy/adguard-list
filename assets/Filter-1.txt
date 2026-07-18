@@ -1,8 +1,8 @@
 ! Title: Sick Prodigy Compiled AdGuard List
 ! Expires: 1 day (update frequency)
 ! Description: Compiled from Filter-2.txt, Filter-3.txt, and Filter-4.txt.
-! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list
-! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE
+! Homepage: https://gitea.sickgaming.net/sickprodigy/adguard-list
+! License: https://gitea.sickgaming.net/sickprodigy/adguard-list/raw/branch/main/LICENSE
 ! Last modified: 07/18/2026
 ! Version: generated
 !
@@ -17,8 +17,8 @@
 ! Title: Sick Prodigy's Adguard List
 ! Expires: 1 day (update frequency)
 ! Description: Filters for general safe sites, bad actors, fake news, and other annoying sites not to waste time on.
-! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list
-! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE
+! Homepage: https://gitea.sickgaming.net/sickprodigy/adguard-list
+! License: https://gitea.sickgaming.net/sickprodigy/adguard-list/raw/branch/main/LICENSE
 ! Last modified: 07/17/2026
 ! Version: 1.0.0.5
 
@@ -120,6 +120,7 @@
 ||bannercenter.net^
 ||trafficswarm.com^
 ||tutubox.io^
+
 
 ! End Filter-2.txt
 
@@ -2769,8 +2770,8 @@
 ! Title: Sick Prodigy Browser Adguard/uBlock List
 ! Expires: 1 day (update frequency)
 ! Description: Browser extension filters for URL parameters, cosmetic hiding, and path/script blocking. Not intended for AdGuard Home DNS filtering.
-! Homepage: https://gitea.rcs1.xyz/sickprodigy/adguard-list
-! License: https://gitea.rcs1.xyz/sickprodigy/adguard-list/raw/branch/main/LICENSE
+! Homepage: https://gitea.sickgaming.net/sickprodigy/adguard-list
+! License: https://gitea.sickgaming.net/sickprodigy/adguard-list/raw/branch/main/LICENSE
 ! Last modified: 07/17/2026
 ! Version: 1.0.0.5
 
@@ -2977,5 +2978,6 @@ $removeparam=wtrint
 ^utm.*.min.js^
 ^webBehaviorTracking.min.js^
 ^webtrekk.js^
+
 
 ! End Filter-4.txt
