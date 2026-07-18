@@ -6,17 +6,20 @@
 ! Last modified: 07/17/2026
 ! Version: 1.0.0.5
 
-! General Safe Sites
-
-@@||analytics.google.com^$important
+! General Safe Sites that are possibly blocked by other lists. 
+@@||analytics.google.com^$importan
+@@||awesomelists.calvinjeng.io^
 @@||bankofamerica.com^
+@@||crackingpatching.com^
 @@||lscr.io^
 @@||marketingplatform.google.com^$important
 @@||plutonium.pw^
 @@||raleighcomfortservices.com^
+@@||sentry.io^
 @@||sickgaming.net^
 
 ! Dandelion sprout doesn't like .top or .xyz sites even though they are cheap...
+@@||awesomelists.top^
 @@||hostpro.top^
 @@||secureservers.top^
 @@||securehosts.top^
@@ -46,12 +49,21 @@
 @@||*.1e100.net^ # Google Server Discovery
 @@||*.awsstatic.com^ # AWS
 
+! Ad Sites that could be generally safe to make money with, so we can login to them
+@@||infolinks.com^
+
 ! Referral Commission Sites (Publisher Side blocked in CHN, Peter Lowe List, and Mini Lite
 @@||signup.cj.com
 @@||cj.com
 @@||shareasale.com^
 ! How else suppose to browse to links without hitting this bs link.. Maybe 127. it?
 @@||^shareasale-analytics.com^
+
+
+! Crypto sites for miners, kinda need those if you want to check your stuff or mine to them
+@@||2miners.com^
+@@||moneroocean.stream^
+@@||coinminerz.com^
 
 ! Block websites that have spam and spin articles for views | AI generated also
 ||assetwolf.com^
@@ -75,3 +87,16 @@
 ||^ia4.salesforceliveagent.com^
 ||la3-c1-ia4.ia4.r.salesforceliveagent.com^
 ||^ia4.r.salesforceliveagent.com^
+
+! Block Dumb sales sites so i don't want to revisit
+||ahrefs.com^
+||attracta.com^
+||kinsta.com^
+||traffboost.net^
+
+!  Block URL Takeovers by Spam Sites
+||1max.top^
+||9anime.to^
+||bannercenter.net^
+||trafficswarm.com^
+||tutubox.io^
