@@ -29,7 +29,7 @@ The separate `adguard-karakeep` script should export its generated allowlist to:
 
 After regenerating `Filter-3.txt`, rebuild `Filter-1.txt` from `Filter-2.txt`, `Filter-3.txt`, and `Filter-4.txt` before publishing the compiled list.
 
-The reference exporter is included at `scripts/export-karakeep-allowlist.py`. With Karakeep and optional AdGuard details in `.env`, run:
+The reference exporter is included at `scripts/export-karakeep-allowlist.py`. It exports exact saved hosts: base domains are allowed when saved, and subdomains are allowed only when they appear in Karakeep. With Karakeep and optional AdGuard details in `scripts/.env`, exports are written under `scripts/exports`. Run:
 
 ```powershell
 python scripts\export-karakeep-allowlist.py --check-adguard --allowlist-path assets\Filter-3.txt

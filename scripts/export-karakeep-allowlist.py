@@ -5,12 +5,11 @@ Examples:
   python scripts/export-karakeep-allowlist.py
   python scripts/export-karakeep-allowlist.py --check-adguard
   python scripts/export-karakeep-allowlist.py --check-dns --only-resolvable
-  python scripts/export-karakeep-allowlist.py --allow-subdomains
 
-The script auto-loads a local .env file when present:
+The script auto-loads scripts/.env when present:
   KARAKEEP_SERVER_ADDR=http://karakeep.example:3000
   KARAKEEP_API_KEY=your_api_key
-  KARAKEEP_OUTPUT_DIR=exports
+  KARAKEEP_OUTPUT_DIR=scripts/exports
   KARAKEEP_ALLOWLIST_PATH=assets/Filter-3.txt
 
 Optional AdGuard Home audit env vars:
@@ -76,7 +75,9 @@ TRACKING_PARAMS = {
 HOST_LABEL_RE = re.compile(r"^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$")
 
 
-def load_dotenv(path: Path = Path(".env")) -> None:
+def load_dotenv(path: Path | None = None) -> None:
+    if path is None:
+        path = Path(__file__).resolve().with_name(".env")
     if not path.exists():
         return
     for raw_line in path.read_text(encoding="utf-8").splitlines():
@@ -98,8 +99,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--api-key", default=os.getenv("KARAKEEP_API_KEY"), help="Karakeep API key.")
     parser.add_argument(
         "--output-dir",
-        default=os.getenv("KARAKEEP_OUTPUT_DIR", "exports"),
-        help="Local export folder. Default: KARAKEEP_OUTPUT_DIR or exports."
+        default=os.getenv("KARAKEEP_OUTPUT_DIR", str(Path(__file__).resolve().with_name("exports"))),
+        help="Local export folder. Default: KARAKEEP_OUTPUT_DIR or scripts/exports."
     )
     parser.add_argument(
         "--allowlist-path",
@@ -118,11 +119,6 @@ def parse_args() -> argparse.Namespace:
         action="append",
         default=[],
         help="Extra registrable domain to exclude from allowlist candidates. Repeatable.",
-    )
-    parser.add_argument(
-        "--allow-subdomains",
-        action="store_true",
-        help="Generate allow rules for exact hosts instead of registrable/root domains.",
     )
     parser.add_argument(
         "--include-ip-hosts",
@@ -243,8 +239,6 @@ def host_from_url(raw_url: str) -> str | None:
     if not host:
         return None
     host = host.lower().rstrip(".")
-    if host.startswith("www."):
-        host = host[4:]
     return host
 
 
@@ -336,7 +330,7 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> 
 
 
 def allow_rule(name: str) -> str:
-    return f"@@||{name}^"
+    return f"@@{name}"
 
 
 def write_allowlist(path: Path, title: str, description: str, generated_at: str, scope: str, names: list[str]) -> None:
@@ -355,7 +349,6 @@ def export_files(
     output_dir: Path,
     bookmarks: list[dict[str, Any]],
     excluded_domains: set[str],
-    allow_subdomains: bool,
     include_ip_hosts: bool,
     check_dns: bool,
     only_resolvable: bool,
@@ -406,8 +399,8 @@ def export_files(
         links_by_host.setdefault(host, []).append(row)
         links_by_domain.setdefault(domain, []).append(row)
 
-    candidate_counts = host_counts if allow_subdomains else domain_counts
-    links_by_candidate = links_by_host if allow_subdomains else links_by_domain
+    candidate_counts = host_counts
+    links_by_candidate = links_by_host
     all_candidates = sorted(candidate_counts)
 
     dns_status: dict[str, str] = {}
@@ -537,21 +530,20 @@ def export_files(
     write_csv(whitelist_matches_path, whitelist_matches, match_fields)
     write_csv(other_matches_path, other_matches, match_fields)
 
-    scope = "exact hosts" if allow_subdomains else "registrable domains"
     write_allowlist(
         allowlist_path,
         "Karakeep Generated Allowlist Candidates",
         "Review before enabling. Blocked AdGuard conflicts are excluded unless --include-blocked-conflicts is used.",
         generated_at,
-        scope,
+        "exact saved hosts",
         allowlist_names,
     )
     write_allowlist(
         blocked_review_path,
         "Karakeep Blocked-Domain Allowlist Review",
-        "These saved domains are currently blocked by AdGuard. Manually review before allowing main domains.",
+        "These saved hosts are currently blocked by AdGuard. Manually review before allowing them.",
         generated_at,
-        scope,
+        "exact saved hosts",
         blocked_review_names,
     )
 
@@ -615,7 +607,6 @@ def main() -> int:
             Path(args.output_dir),
             bookmarks,
             excluded_domains,
-            args.allow_subdomains,
             args.include_ip_hosts,
             args.check_dns,
             args.only_resolvable,
