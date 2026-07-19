@@ -330,7 +330,7 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> 
 
 
 def allow_rule(name: str) -> str:
-    return f"@@{name}"
+    return f"@@|{name}^"
 
 
 def write_allowlist(path: Path, title: str, description: str, generated_at: str, scope: str, names: list[str]) -> None:
