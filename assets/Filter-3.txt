@@ -1,6 +1,6 @@
 ! Title: Karakeep Generated Allowlist Candidates
 ! Description: Review before enabling. Blocked AdGuard conflicts are excluded unless --include-blocked-conflicts is used.
-! Last generated: 2026-07-19T01:04:02Z
+! Last generated: 2026-07-19T01:41:20Z
 ! Scope: exact saved hosts
 !
 @@|0day.today^
@@ -1921,7 +1921,6 @@
 @@|webk.telegram.org^
 @@|webmaster.yandex.com^
 @@|webmin.com^
-@@|weboasis.su^
 @@|webplatform.github.io^
 @@|webpy.org^
 @@|websitesetup.org^

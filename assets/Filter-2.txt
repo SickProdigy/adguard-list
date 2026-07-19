@@ -76,11 +76,11 @@
 ||twinenviro.com^
 
 ! Block Newer Adverts
-||tags.crwdcntrl.net^$important
-||api.adroll.app^$important
-||defiancebelow.com^$important
+||tags.crwdcntrl.net^
+||api.adroll.app^
+||defiancebelow.com^
 ! Not really sure why this keeps popping up
-||www.ghacks.net^$important
+||ghacks.net^
 ! Block Additional Sites / Annoying Adverts
 ||d.la3-c1-ia4.salesforceliveagent.com^
 ||^ia4.salesforceliveagent.com^
