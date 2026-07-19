@@ -7,7 +7,6 @@
 ! Version: 1.0.0.5
 
 ! General Safe Sites that are possibly blocked by other lists. 
-@@||ahrefs.com^
 @@||analytics.google.com^$important
 @@||awesomelists.calvinjeng.io^
 @@||bankofamerica.com^
@@ -15,11 +14,8 @@
 @@||lscr.io^
 @@||marketingplatform.google.com^$important
 @@||plutonium.pw^
-@@||quickboosts.gg^
 @@||raleighcomfortservices.com^
-@@||sentry.io^
 @@||sickgaming.net^
-@@||tempr.email^
 
 ! Dandelion sprout doesn't like .top or .xyz sites even though they are cheap...
 @@||awesomelists.top^
